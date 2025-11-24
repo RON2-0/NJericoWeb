@@ -47,8 +47,9 @@
                 <span class="text-xl font-bold">Nueva<span class="text-skywave">Jericó</span></span>
             </a>
             <div class="hidden md:flex space-x-8" id="main-nav">
-                <a href="#top" class="nav-link transition duration-300 text-sunshine font-medium active">Inicio</a>
+                <a href="#top" class="nav-link transition duration-300 hover:text-sunshine font-medium">Inicio</a>
                 <a href="#sucursales" class="nav-link transition duration-300 hover:text-sunshine font-medium">Sucursales</a>
+                <a href="#productos" class="nav-link transition duration-300 hover:text-sunshine font-medium">Productos</a>
                 <a href="#garantias" class="nav-link transition duration-300 hover:text-sunshine font-medium">Garantías</a>
                 <a href="#contacto" class="nav-link transition duration-300 hover:text-sunshine font-medium">Contacto</a>
             </div>
@@ -58,8 +59,9 @@
         </div>
         <!-- Mobile menu -->
             <div class="md:hidden hidden bg-black px-4 py-2" id="mobile-menu">
-                <a href="#top" class="block py-2 text-sunshine font-medium active">Inicio</a>
+                <a href="#top" class="block py-2 text-white hover:text-sunshine">Inicio</a>
                 <a href="#sucursales" class="block py-2 text-white hover:text-sunshine">Sucursales</a>
+                <a href="#productos" class="block py-2 text-white hover:text-sunshine">Productos</a>
                 <a href="#garantias" class="block py-2 text-white hover:text-sunshine">Garantías</a>
                 <a href="#contacto" class="block py-2 text-white hover:text-sunshine">Contacto</a>
             </div>
@@ -148,8 +150,79 @@
         </div>
     </section>
 
+    <!--Productos Section -->
+    <section id="productos" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Lo Más <span class="text-citrus">Vendido</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mb-4">Descubre los favoritos de nuestros clientes, disponibles en ambas sucursales.</p>
+                <div class="w-20 h-1 bg-skywave mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="group bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-xl transition duration-300 overflow-hidden flex flex-col h-full">
+                    <div class="relative h-48 bg-gray-100 overflow-hidden flex-shrink-0">
+                        <img src="img/escolar.webp" alt="Kit Escolar" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-0 right-0 bg-citrus text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                            Top Venta
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold mb-2 text-gray-800 group-hover:text-skywave transition">Kits Escolares</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">Cuadernos, lápices y todo lo necesario para el regreso a clases con las mejores marcas.</p>
+                        <a href="#contacto" class="block text-center bg-gray-900 text-white py-2 rounded-lg hover:bg-skywave transition duration-300 mt-auto">Cotizar</a>
+                    </div>
+                </div>
+
+                <div class="group bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-xl transition duration-300 overflow-hidden flex flex-col h-full">
+                    <div class="relative h-48 bg-gray-100 overflow-hidden flex-shrink-0">
+                        <img src="img/tecnologia.webp" alt="Calculadoras" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold mb-2 text-gray-800 group-hover:text-skywave transition">Calculadoras Científicas</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">Modelos avanzados para bachillerato y universidad. Durabilidad garantizada.</p>
+                        <a href="#contacto" class="block text-center bg-gray-900 text-white py-2 rounded-lg hover:bg-skywave transition duration-300 mt-auto">Cotizar</a>
+                    </div>
+                </div>
+
+                <div class="group bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-xl transition duration-300 overflow-hidden flex flex-col h-full">
+                    <div class="relative h-48 bg-gray-100 overflow-hidden flex-shrink-0">
+                        <img src="img/oficina.webp" alt="Papelería Oficina" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold mb-2 text-gray-800 group-hover:text-skywave transition">Insumos de Oficina</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">Papel bond, archiveros y suministros esenciales para tu empresa o negocio.</p>
+                        <a href="#contacto" class="block text-center bg-gray-900 text-white py-2 rounded-lg hover:bg-skywave transition duration-300 mt-auto">Cotizar</a>
+                    </div>
+                </div>
+
+                <div class="group bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-xl transition duration-300 overflow-hidden flex flex-col h-full">
+                    <div class="relative h-48 bg-gray-100 overflow-hidden flex-shrink-0">
+                        <img src="img/regalos.webp" alt="Juguetes y Regalos" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-0 right-0 bg-skywave text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                            Nuevo
+                        </div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold mb-2 text-gray-800 group-hover:text-skywave transition">Juguetes y Regalos</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow">Variedad de juguetes divertidos y opciones perfectas para regalar en cualquier ocasión.</p>
+                        <a href="#contacto" class="block text-center bg-gray-900 text-white py-2 rounded-lg hover:bg-skywave transition duration-300 mt-auto">Cotizar</a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="https://wa.me/50324023974" target="_blank" rel="noopener noreferrer" class="inline-flex items-center font-bold text-gray-800 hover:text-citrus transition duration-300">
+                    Si no ves lo que buscas, contáctanos para verificar la disponibilidad <i data-feather="arrow-right" class="ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Garantías Section -->
-    <section id="garantias" class="py-16 bg-white">
+    <section id="garantias" class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Garantías y <span class="text-skywave">Políticas</span></h2>
