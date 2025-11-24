@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Librería Nueva Jericó - Dos sucursales en Metapán, El Salvador. Ofrecemos productos de calidad y excelente servicio.">
+    <title>Nueva Jericó</title>
+    <link rel="icon" type="image/x-icon" href="img/G.ico" loading="lazy">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        citrus: '#F68C28',
+                        sunshine: '#F9E01D',
+                        skywave: '#00B1E2'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-black text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#top" class="flex items-center space-x-2">
+                <div class="w-20 h-10 flex items-center justify-center">
+                    <img src="img/LapizW.webp" alt="Logo" loading="lazy">
+                </div>
+                <span class="text-xl font-bold">Nueva<span class="text-skywave">Jericó</span></span>
+            </a>
+            <div class="hidden md:flex space-x-8" id="main-nav">
+                <a href="#top" class="nav-link transition duration-300 text-sunshine font-medium active">Inicio</a>
+                <a href="#sucursales" class="nav-link transition duration-300 hover:text-sunshine font-medium">Sucursales</a>
+                <a href="#garantias" class="nav-link transition duration-300 hover:text-sunshine font-medium">Garantías</a>
+                <a href="#contacto" class="nav-link transition duration-300 hover:text-sunshine font-medium">Contacto</a>
+            </div>
+            <button class="md:hidden focus:outline-none" id="menu-toggle" aria-label="Abrir menú">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+            <div class="md:hidden hidden bg-black px-4 py-2" id="mobile-menu">
+                <a href="#top" class="block py-2 text-sunshine font-medium active">Inicio</a>
+                <a href="#sucursales" class="block py-2 text-white hover:text-sunshine">Sucursales</a>
+                <a href="#garantias" class="block py-2 text-white hover:text-sunshine">Garantías</a>
+                <a href="#contacto" class="block py-2 text-white hover:text-sunshine">Contacto</a>
+            </div>
+    </nav>
+    <!-- Hero Section -->
+    <section id="top" class="relative bg-gradient-to-r from-black to-gray-800 text-white overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-90"></div>
+        </div>
+        <div class="container mx-auto px-4 py-24 relative z-10 animate__animated animate__fadeIn">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Soluciones Brillantes <span class="text-sunshine">en Dos Locaciones</span></h1>
+                <p class="text-xl mb-8">Innovación y calidad que iluminan tu negocio desde nuestras dos sucursales estratégicas.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#sucursales" class="btn-hover bg-sunshine text-black font-bold py-3 px-8 rounded-full transition duration-300 inline-flex items-center">
+                        <i data-feather="map-pin" class="mr-2"></i> Nuestras Sucursales
+                    </a>
+                    <a href="#contacto" class="btn-hover bg-skywave text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-flex items-center">
+                        <i data-feather="mail" class="mr-2"></i> Contáctanos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sucursales Section -->
+    <section id="sucursales" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nuestras <span class="text-citrus">Sucursales</span></h2>
+                <div class="w-20 h-1 bg-skywave mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Sucursal 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-500 hover:shadow-xl">
+                    <div class="h-48 bg-citrus flex items-center justify-center">
+                        <h3 class="text-2xl font-bold text-white">Casa Matriz - Librería</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <i data-feather="map-pin" class="text-skywave mr-2"></i>
+                            <p>Entre la 4a. y, C. 15 de Septiembre 6, Metapán</p>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <i data-feather="phone" class="text-skywave mr-2"></i>
+                            <p>+503 24023974</p>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <i data-feather="clock" class="text-skywave mr-2"></i>
+                            <p>Lun-Vie: 7:15 - 17:00<br>Sab: 7:15 - 16:00</p>
+                        </div>
+                        <div id="map1" class="w-full h-56 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">
+                            Mapa cargando...
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sucursal 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-500 hover:shadow-xl">
+                    <div class="h-48 bg-skywave flex items-center justify-center">
+                        <h3 class="text-2xl font-bold text-white">Sucursal 2 - Variedades</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <i data-feather="map-pin" class="text-citrus mr-2"></i>
+                            <p>Entre la 4a. y, C. 15 de Septiembre 6, Metapán</p>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <i data-feather="phone" class="text-citrus mr-2"></i>
+                            <p>+503 24023974</p>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <i data-feather="clock" class="text-citrus mr-2"></i>
+                            <p>Lun-Vie: 7:15 - 17:00<br>Sab: 7:15 - 16:00</p>
+                        </div>
+                        <div id="map2" class="w-full h-56 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">
+                            Mapa cargando...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Garantías Section -->
+    <section id="garantias" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Garantías y <span class="text-skywave">Políticas</span></h2>
+                <div class="w-20 h-1 bg-citrus mx-auto"></div>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- Accordion Item 1 -->
+                <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="accordion-btn w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 focus:outline-none" aria-label="Expandir Garantías">
+                        <span class="text-lg font-medium text-left">Política de Garantía</span>
+                        <i data-feather="chevron-down" class="accordion-icon transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="p-4 bg-white">
+                            <p class="mb-4">Ofrecemos una garantía de satisfacción del 100% en todos nuestros productos y servicios. Si no está completamente satisfecho, trabajaremos con usted para resolver cualquier problema o le ofreceremos un reembolso completo.</p>
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>Garantía de 1 año en todos los productos</li>
+                                <li>Soporte técnico gratuito durante el período de garantía</li>
+                                <li>Reemplazo inmediato de productos defectuosos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Accordion Item 2 -->
+                <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="accordion-btn w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 focus:outline-none" aria-label="Expandir Política de Privacidad">
+                        <span class="text-lg font-medium text-left">Política de Privacidad</span>
+                        <i data-feather="chevron-down" class="accordion-icon transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="p-4 bg-white">
+                            <p class="mb-4">Respetamos su privacidad y nos comprometemos a proteger su información personal. Esta política explica cómo recopilamos, usamos y protegemos sus datos.</p>
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>No compartimos su información con terceros sin su consentimiento</li>
+                                <li>Utilizamos cifrado SSL para todas las transacciones</li>
+                                <li>Puede solicitar la eliminación de sus datos en cualquier momento</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Accordion Item 3 -->
+                <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="accordion-btn w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 focus:outline-none" aria-label="Expandir Términos de Servicio">
+                        <span class="text-lg font-medium text-left">Términos de Servicio</span>
+                        <i data-feather="chevron-down" class="accordion-icon transform transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="p-4 bg-white">
+                            <p class="mb-4">Al utilizar nuestros servicios, usted acepta los siguientes términos y condiciones que rigen nuestra relación comercial.</p>
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>Pago anticipado requerido para todos los proyectos</li>
+                                <li>Los cambios de alcance pueden afectar el cronograma y el presupuesto</li>
+                                <li>Nos reservamos el derecho de rechazar proyectos que no se alineen con nuestros valores</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="py-16 bg-gradient-to-r from-skywave to-citrus text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Contáctanos</h2>
+                <div class="w-20 h-1 bg-sunshine mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-6 text-sunshine">Formulario de Contacto</h3>
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="block mb-2">Nombre Completo</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-sunshine">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block mb-2">Correo Electrónico</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-sunshine">
+                        </div>
+                        <div class="mb-4">
+                            <label for="sucursal" class="block mb-2">Sucursal de Interés</label>
+                            <select id="sucursal" class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-sunshine">
+                                <option value="">Seleccione una sucursal</option>
+                                <option value="norte">Sucursal Norte</option>
+                                <option value="sur">Sucursal Sur</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block mb-2">Mensaje</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 focus:outline-none focus:ring-2 focus:ring-sunshine"></textarea>
+                        </div>
+                        <button type="submit" class="btn-hover bg-sunshine text-black font-bold py-3 px-6 rounded-lg transition duration-300 w-full flex items-center justify-center" aria-label="Enviar Mensaje">
+                            <i data-feather="send" class="mr-2"></i> Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-6 text-sunshine">Información de Contacto</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <i data-feather="phone" class="mt-1 mr-4 text-sunshine"></i>
+                            <div>
+                                <h4 class="font-bold">Teléfono</h4>
+                                <p>+503 24023974</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-feather="mail" class="mt-1 mr-4 text-sunshine"></i>
+                            <div>
+                                <h4 class="font-bold">Email</h4>
+                                <p>nuevajericosoporte@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-feather="message-square" class="mt-1 mr-4 text-sunshine"></i>
+                            <div>
+                                <h4 class="font-bold">WhatsApp</h4>
+                                <p>+503 24023974</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-feather="instagram" class="mt-1 mr-4 text-sunshine"></i>
+                            <div>
+                                <h4 class="font-bold">Instagram</h4>
+                                <p>@nueva_jerico</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-feather="facebook" class="mt-1 mr-4 text-sunshine"></i>
+                            <div>
+                                <h4 class="font-bold">Facebook</h4>
+                                <p>fb.com/Librería Nueva Jericó</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <button id="scrollTopBtn" aria-label="Volver arriba" class="hidden fixed bottom-6 right-6 bg-skywave text-white p-3 rounded-full shadow-lg">
+        <i data-feather="arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                <a href="#top" class="flex items-center space-x-2">
+                        <div class="w-16 h-8 flex items-center justify-center">
+                            <img src="img/LapizW.webp" alt="Logo" loading="lazy">
+                        </div>
+                        <span class="text-lg font-bold">Nueva<span class="text-skywave">Jericó</span></span>
+                    </a>
+                </div>
+                <div class="flex space-x-6 mb-4 md:mb-0">
+                    <a href="https://www.facebook.com/p/Librer%C3%ADa-Nueva-Jeric%C3%B3-100095195517581/" class="hover:text-sunshine transition duration-300">
+                        <i data-feather="facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/nueva_jerico/" class="hover:text-sunshine transition duration-300">
+                        <i data-feather="instagram"></i>
+                    </a>
+                    <a href="https://wa.me/24023974" class="hover:text-sunshine transition duration-300">
+                        <i data-feather="message-circle"></i>
+                    </a>
+                </div>
+                <div class="text-sm text-gray-400">
+                    &copy; 2025 Nueva Jericó. Todos los derechos reservados.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+
+</body>
+</html>
