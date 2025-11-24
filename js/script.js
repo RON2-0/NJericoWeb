@@ -162,3 +162,54 @@ window.addEventListener('load', function() {
         }
     });
 });
+
+// Formspree form submission handling
+
+document.getElementById('contact-form').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Evita que la página se recargue
+            
+            const form = event.target;
+            const data = new FormData(form);
+            const statusSuccess = document.getElementById('form-success');
+            const statusError = document.getElementById('form-error');
+            const submitBtn = document.getElementById('submit-btn');
+            const btnText = submitBtn.querySelector('span');
+
+            // 1. Cambiar estado del botón (feedback visual inmediato)
+            submitBtn.disabled = true;
+            btnText.textContent = 'Enviando...';
+            statusSuccess.classList.add('hidden');
+            statusError.classList.add('hidden');
+
+            try {
+                // 2. Envío a tu endpoint de Formspree
+                const response = await fetch("https://formspree.io/f/xgvqgjoe", {
+                    method: "POST",
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // 3. Éxito: Limpiar y mostrar mensaje
+                    form.reset();
+                    statusSuccess.classList.remove('hidden');
+                    
+                    // Opcional: Ocultar el mensaje de éxito después de 5 segundos
+                    setTimeout(() => {
+                        statusSuccess.classList.add('hidden');
+                    }, 8000);
+                } else {
+                    // Error del servidor (Formspree)
+                    statusError.classList.remove('hidden');
+                }
+            } catch (error) {
+                // Error de red (Internet)
+                statusError.classList.remove('hidden');
+            } finally {
+                // 4. Restaurar botón
+                submitBtn.disabled = false;
+                btnText.textContent = 'Enviar Mensaje';
+            }
+        });
